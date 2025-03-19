@@ -1,8 +1,13 @@
 <?php
 require __DIR__ ."/vendor/autoload.php";
 
-if (isset($_POST["titulo"],$_POST["descricao"],$_POST["ativo"])) {
-    die("CADASTRAR");
+use \App\Emtiti\Vaga;
+
+if(isset($__POST['titulo'],$__POST['descricao'],$__POST['ativo'])){
+    $obvaga = new Vaga();
+    $obvaga->titulo = $_POST['titulo'];
+    $obvaga->descricao = $_POST['descricao'];
+    $obvaga->ativo = $_POST['ativo'];
 }
 
 
