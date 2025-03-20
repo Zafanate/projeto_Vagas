@@ -4,10 +4,10 @@ require __DIR__ ."/vendor/autoload.php";
 use \App\Emtiti\Vaga;
 
 if(isset($__POST['titulo'],$__POST['descricao'],$__POST['ativo'])){
-    $obvaga = new Vaga();
-    $obvaga->titulo = $_POST['titulo'];
-    $obvaga->descricao = $_POST['descricao'];
-    $obvaga->ativo = $_POST['ativo'];
+    $obVaga = new Vaga();
+    $obVaga->titulo = $__POST['titulo'];
+    $obVaga->descricao = $__POST['descricao'];
+    $obVaga ->ativo = $__POST['ativo'];
 }
 
 

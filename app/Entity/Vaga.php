@@ -1,5 +1,5 @@
 <?php
-namespace App\Emtiti;
+namespace App\Entity;
 
  class Vaga{
     /**
