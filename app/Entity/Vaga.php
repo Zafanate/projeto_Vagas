@@ -1,5 +1,6 @@
 <?php
 namespace App\Entity;
+use
 
  class Vaga{
     /**
@@ -31,6 +32,19 @@ namespace App\Entity;
      * @var string
      */
     public $data;
+    /**
+     * CADASTAR
+     * @return boolean
+     */
+    public function $cadastar(){
+        //DEFINIR DATA
+        $this->data = date('Y-m-d H:i:s');
+
+        //INSERIR VAGA NO BANCO
+        $obDatabase = new $Database('vagas');
+        
+
+    }
     
  }
 

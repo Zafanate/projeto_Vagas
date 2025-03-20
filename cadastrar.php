@@ -1,13 +1,16 @@
 <?php
 require __DIR__ ."/vendor/autoload.php";
 
-use \App\Emtiti\Vaga;
+use \App\Entity\Vaga;
 
-if(isset($__POST['titulo'],$__POST['descricao'],$__POST['ativo'])){
-    $obVaga = new Vaga();
-    $obVaga->titulo = $__POST['titulo'];
-    $obVaga->descricao = $__POST['descricao'];
-    $obVaga ->ativo = $__POST['ativo'];
+if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
+    $obVaga = new Vaga;
+    $obVaga->titulo    = $_POST['titulo'];
+    $obVaga->descricao = $_POST['descricao'];
+    $obVaga->ativo     = $_POST['ativo'];
+    $obVaga->cadastar;
+
+    echo "<prev>"; print_r($obVaga);echo"</prev>" ;exit;
 }
 
 
