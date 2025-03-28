@@ -1,6 +1,6 @@
 <?php
 namespace App\Entity;
-use \App\Db\Database;
+use \App\db\Database;
 
  class Vaga{
     /**
@@ -36,12 +36,18 @@ use \App\Db\Database;
      * CADASTAR
      * @return boolean
      */
-    public function cadastar(){
+    public function cadastrar(){
         //DEFINIR DATA
         $this->data = date('Y-m-d H:i:s');
 
         //INSERIR VAGA NO BANCO
-        $obDatabase = new $Database('vagas');
+        $obDatabase = new Database('vagas');
+        $obDatabase->insert([
+            'titulo' => $this->titulo,
+            'descricao' => $this->descricao,
+            'ativo'=> $this->ativo,
+            'data'=> $this->data,
+        ]);
         echo "<prev>";print_r($obDatabase);echo"</prev>";exit;
         
 
