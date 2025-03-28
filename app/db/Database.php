@@ -1,7 +1,7 @@
 <?php 
  namespace App\db;
 
- use /PDO
+ use /PDO;
 
  class Database{
         /**
@@ -47,10 +47,12 @@
         */
        private function set_connection(){
               try{
-                     $this->$connection = new PDO('mysql:host'.self::HOST.';dname='.self::NAME,self::USER,self::PASSWORD);
+                     $this->$connection = new PDO('mysql:host'.self::HOST.';dbname='.self::NAME,self::USER,self::PASSWORD);
                      $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
               }catch(PDOException $e){
                      die('ERROR'. $e->getMessage());
               }
+       }
+}
 ?>
